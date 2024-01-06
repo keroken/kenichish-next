@@ -1,8 +1,8 @@
-import { GetStaticProps, NextPage, NextPageContext } from 'next';
+import { GetStaticProps, NextPage, NextPageContext } from "next";
 
-import Head from 'next/head';
+import Head from "next/head";
 
-type SSGProps ={
+type SSGProps = {
   message: string;
 };
 
@@ -30,8 +30,8 @@ export const getStaticProps: GetStaticProps<SSGProps> = async (context) => {
   console.log(message);
   return {
     // ここで返したpropsを元にpageコンポーネントを描画する
-    props: { message }
-  }
-}
+    props: { message },
+  };
+};
 
 export default SSG;
